@@ -1,69 +1,66 @@
 import zipfile
-import os
+from io import BytesIO
+from PIL import Image, ImageOps
 from bs4 import BeautifulSoup
-import cssutils
+import os
 
-# Replace 'input.epub' with the path to your EPUB file
-epub_file_path = r"C:\Users\pauleena phan\Downloads\PragmaticProgrammer.epub"
+# Function to flip an image upside down
+def flip_image(image):
+    return ImageOps.flip(image)
 
-# Create a temporary directory to extract and modify the EPUB contents
-temp_dir = 'temp_epub'
-os.makedirs(temp_dir, exist_ok=True)
-
-# Extract the EPUB contents to the temporary directory
-with zipfile.ZipFile(epub_file_path, 'r') as epub_zip:
-    epub_zip.extractall(temp_dir)
-
-# Modify the HTML and CSS files
-for root, _, files in os.walk(temp_dir):
-    for file in files:
-        file_path = os.path.join(root, file)
-        if file_path.endswith('.xhtml'):  # Modify HTML files
-            with open(file_path, 'r', encoding='utf-8') as html_file:
-                content = html_file.read()
-                soup = BeautifulSoup(content, 'html.parser')
-
-                # Modify the HTML content here using BeautifulSoup methods
-                # Example: Change text color to pink for all <p> elements
-                for paragraph in soup.find_all('p'):
-                    paragraph['style'] = 'color: yellow;'
-
-                # Save the modified HTML back
-                with open(file_path, 'w', encoding='utf-8') as modified_html_file:
-                    modified_html_file.write(str(soup))
-
-        elif file_path.endswith('.css'):  # Modify CSS files
-            with open(file_path, 'r', encoding='utf-8') as css_file:
-                css_content = css_file.read()
-                stylesheet = cssutils.CSSParser().parseString(css_content)
-
-                # Modify background color rules
-                for rule in stylesheet:
-                    # Example: Change the background color to red for all 'body' elements
-                    if 'body' in rule.selectorText:
-                        rule.style['background-color'] = 'red'
-
-                # Save the modified CSS back
-                with open(file_path, 'w', encoding='utf-8') as modified_css_file:
-                    modified_css_file.write(stylesheet.cssText.decode('utf-8'))
-
-# Re-zip the modified contents back to the EPUB file
-modified_epub_path = 'modified.epub'
-with zipfile.ZipFile(modified_epub_path, 'w') as new_epub:
-    for root, _, files in os.walk(temp_dir):
-        for file in files:
-            file_path = os.path.join(root, file)
-            rel_path = os.path.relpath(file_path, temp_dir)
-            new_epub.write(file_path, rel_path)
-
-# Clean up temporary directory
-for root, dirs, files in os.walk(temp_dir, topdown=False):
-    for file in files:
-        os.remove(os.path.join(root, file))
-    for directory in dirs:
-        os.rmdir(os.path.join(root, directory))
-os.rmdir(temp_dir)
+# Function to remove <img> elements from a specific class in an HTML file
+def remove_images_from_class(html_content, class_name):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    elements_to_remove = soup.find_all(class_=class_name)
+    
+    for element in elements_to_remove:
+        # Find all <img> elements within the class and remove them
+        for img_element in element.find_all('img'):
+            img_element.decompose()  # Remove the entire <img> element
+    
+    return str(soup)
 
 
+# Function to remove text content from an HTML file
+def remove_text_from_html(html_content):
+    # Decode bytes to string, replace text, and encode back to bytes
+    text = html_content.decode('utf-8')
+    text_without_pattern = text.replace("I l@ve RuBoard", "")
+    return text_without_pattern.encode('utf-8')
 
-print("Modifications applied. Modified EPUB saved as 'modified.epub'")
+# Function to create a new EPUB file with removed images from specified classes
+def create_modified_epub(input_epub, output_epub):
+    # Create a temporary directory to extract the EPUB content
+    temp_dir = "temp_epub"
+    os.makedirs(temp_dir, exist_ok=True)
+    with zipfile.ZipFile(input_epub, 'r') as epub_file:
+        epub_file.extractall(temp_dir)
+
+    # Create a new EPUB file
+    with zipfile.ZipFile(output_epub, 'w', zipfile.ZIP_DEFLATED) as new_epub_file:
+        for root, dirs, files in os.walk(temp_dir):
+            for file in files:
+                file_path = os.path.join(root, file)
+                with open(file_path, 'rb') as file:
+                    content = file.read()
+                
+                if file_path.endswith(('.jpg', '.jpeg', '.png')):
+                    image = Image.open(BytesIO(content))
+                    flipped_image = flip_image(image)
+                    flipped_image_bytes = BytesIO()
+                    flipped_image.save(flipped_image_bytes, format=image.format)
+                    content = flipped_image_bytes.getvalue()
+                elif file_path.endswith('.html'):
+                    # Remove images from the "calibre_6" and "calibre_1" classes
+                    content = remove_images_from_class(content, 'calibre_6')  # Remove from calibre_6 class
+                    content = remove_images_from_class(content, 'calibre_1')  # Remove from calibre_1 class
+
+                arcname = os.path.relpath(file_path, temp_dir)
+                new_epub_file.writestr(arcname, content)
+
+if __name__ == "__main__":
+    input_epub = "PragmaticProgrammer.epub"  # Replace with your input EPUB file
+    output_epub = "output.epub"  # Replace with your desired output EPUB file
+
+    create_modified_epub(input_epub, output_epub)
+    print("Images flipped and text removed successfully in the EPUB!")

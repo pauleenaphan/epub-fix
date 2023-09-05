@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="edbd6dae-9073-4508-9b44-db220959252e" name="dtb:uid"/>
+    <meta content="0" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>The Pragmatic Programmer, From Journeyman To Master - Andrew Hunt, David Thomas - Addison Wesley</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="num_1">
+      <navLabel>
+        <text>Front Matter</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_2">
+      <navLabel>
+        <text>Table of Contents</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_3">
+      <navLabel>
+        <text>Pragmatic Programmer, The: From Journeyman to Master</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_4">
+      <navLabel>
+        <text>Unnamed</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_5">
+      <navLabel>
+        <text>Preface</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_6">
+      <navLabel>
+        <text>Who Should Read This Book?</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_7">
+      <navLabel>
+        <text>What Makes a Pragmatic Programmer?</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_8">
+      <navLabel>
+        <text>Individual Pragmatists, Large Teams</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_9">
+      <navLabel>
+        <text>It's a Continuous Process</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_10">
+      <navLabel>
+        <text>How the Book Is Organized</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_11">
+      <navLabel>
+        <text>What's in a Name?</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_12">
+      <navLabel>
+        <text>1. A Pragmatic Philosophy</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_13">
+      <navLabel>
+        <text>The Cat Ate My Source Code</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_14">
+      <navLabel>
+        <text>Software Entropy</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_15">
+      <navLabel>
+        <text>Stone Soup and Boiled Frogs</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_16">
+      <navLabel>
+        <text>Good-Enough Software</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_17">
+      <navLabel>
+        <text>Your Knowledge Portfolio</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_18">
+      <navLabel>
+        <text>Communicate!</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_19">
+      <navLabel>
+        <text>Summary</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_20">
+      <navLabel>
+        <text>2. A Pragmatic Approach</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_21">
+      <navLabel>
+        <text>The Evils of Duplication</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_22">
+      <navLabel>
+        <text>Orthogonality</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_23">
+      <navLabel>
+        <text>Reversibility</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_24">
+      <navLabel>
+        <text>Tracer Bullets</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_25">
+      <navLabel>
+        <text>Prototypes and Post-it Notes</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_26">
+      <navLabel>
+        <text>Domain Languages</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_27">
+      <navLabel>
+        <text>Estimating</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_28">
+      <navLabel>
+        <text>3. The Basic Tools</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_29">
+      <navLabel>
+        <text>The Power of Plain Text</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_30">
+      <navLabel>
+        <text>Shell Games</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_31">
+      <navLabel>
+        <text>Power Editing</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_32">
+      <navLabel>
+        <text>Source Code Control</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_33">
+      <navLabel>
+        <text>But My Team Isn't Using Source Code Control</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_34">
+      <navLabel>
+        <text>Source Code Control Products</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_35">
+      <navLabel>
+        <text>Debugging</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_36">
+      <navLabel>
+        <text>Text Manipulation</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_37">
+      <navLabel>
+        <text>Exercises</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_38">
+      <navLabel>
+        <text>Code Generators</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_39">
+      <navLabel>
+        <text>4. Pragmatic Paranoia</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_40">
+      <navLabel>
+        <text>Design by Contract</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_41">
+      <navLabel>
+        <text>Dead Programs Tell No Lies</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_42">
+      <navLabel>
+        <text>Assertive Programming</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_43">
+      <navLabel>
+        <text>When to Use Exceptions</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_44">
+      <navLabel>
+        <text>How to Balance Resources</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_45">
+      <navLabel>
+        <text>Objects and Exceptions</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_46">
+      <navLabel>
+        <text>Balancing and Exceptions</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_47">
+      <navLabel>
+        <text>When You Can't Balance Resources</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_48">
+      <navLabel>
+        <text>Checking the Balance</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_49">
+      <navLabel>
+        <text>5. Bend or Break</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+    <navPoint id="num_50">
+      <navLabel>
+        <text>Decoupling and the Law of Demeter</text>
+      </navLabel>
+      <content src="index_split_000.html"/>
+    </navPoint>
+  </navMap>
+</ncx>
